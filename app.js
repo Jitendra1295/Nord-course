@@ -1,4 +1,5 @@
 const express = require("express");
+const Mymiddleware = require("./middleware/Mymiddleware")
 
 const app = express();
 
@@ -14,6 +15,8 @@ const courses = [{
 
 app.use(express.json())
 
+//custom middleware 
+app.use(Mymiddleware)
 // route parameters
 
 //  get specific course
